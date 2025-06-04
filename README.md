@@ -6,7 +6,7 @@ Suite à l'égoïsme et l'hypocrisie de certains étudiants de notre chère fili
 
 ## Un couteau à double tranchant
 
-Ce git a donc pour but de partager les cours, TD, TP, comptes rendus et examens de chaque année. Il faut donc savoir l'utiliser à **bonne essient**.
+Ce git a donc pour but de partager les cours, TD, TP, comptes rendus et examens de chaque année. Il faut donc savoir l'utiliser à **bonne escient**.
 Certes, on cherche tous à avoir notre diplôme, mais copier bêtement les comptes rendus dans l'espoir d'avoir une bonne note n'aura d'effet qu'à court terme — et pourra même vous desservir sur le long terme...
 
 ## **Comment utiliser**
