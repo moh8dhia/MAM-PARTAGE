@@ -9,7 +9,73 @@
       background-color: #121212;
       color: #e0e0e0;
       font-family: sans-serif;
-      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background-color: #1e1e1e;
+      padding: 10px 40px;
+      display: flex;
+      gap: 30px;
+      border-bottom: 1px solid #333;
+    }
+
+    .nav-item {
+      position: relative;
+      color: #ffffff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .nav-item:hover .dropdown {
+      display: block;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #2a2a2a;
+      border: 1px solid #444;
+      border-radius: 5px;
+      z-index: 10;
+      min-width: 100px;
+    }
+
+    .dropdown a {
+      display: block;
+      padding: 10px 15px;
+      color: #e0e0e0;
+      text-decoration: none;
+    }
+
+    .dropdown a:hover {
+      background-color: #3a3a3a;
+    }
+
+    /* COURBE NORMALE */
+    .normal-curve {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .normal-curve path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw 3s ease-out forwards;
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    /* PAGE */
+    .content {
       max-width: 800px;
       margin: auto;
       padding: 40px;
@@ -30,140 +96,87 @@
       padding: 5px 8px;
       border-radius: 5px;
     }
-
-    .animation-container {
-      margin-bottom: 40px;
-      text-align: center;
-    }
-
-    svg path {
-      stroke-dasharray: 1000;
-      stroke-dashoffset: 1000;
-      animation: draw 3s ease-out forwards;
-    }
-
-    @keyframes draw {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    /* MENU FLOTTANT */
-    .floating-menu {
-      position: fixed;
-      top: 80px;
-      right: 20px;
-      background-color: #1e1e1e;
-      border: 1px solid #444;
-      border-radius: 10px;
-      padding: 10px 15px;
-      z-index: 999;
-      font-size: 14px;
-      max-width: 180px;
-    }
-
-    .floating-menu h4 {
-      color: #90caf9;
-      margin: 10px 0 5px;
-    }
-
-    .floating-menu ul {
-      list-style: none;
-      padding-left: 10px;
-      margin: 0;
-    }
-
-    .floating-menu li {
-      margin: 5px 0;
-    }
-
-    .floating-menu a {
-      color: #e0e0e0;
-      font-weight: normal;
-    }
-
-    .floating-menu a:hover {
-      text-decoration: underline;
-    }
   </style>
 </head>
 <body>
 
-<div class="animation-container">
-  <svg width="100%" height="120" viewBox="0 0 800 120">
-    <path d="M0,110 C100,20 300,20 400,110 C500,200 700,200 800,110" fill="none" stroke="#90caf9" stroke-width="3"/>
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-item">3A
+    <div class="dropdown">
+      <a href="https://github.com/moh8dhia/MAM-PARTAGE/tree/main/S5" target="_blank">S5</a>
+      <a href="https://github.com/moh8dhia/MAM-PARTAGE/tree/main/S6" target="_blank">S6</a>
+    </div>
+  </div>
+  <div class="nav-item">4A
+    <div class="dropdown">
+      <a href="https://github.com/moh8dhia/MAM-PARTAGE/tree/main/S7" target="_blank">S7</a>
+      <a href="https://github.com/moh8dhia/MAM-PARTAGE/tree/main/S8" target="_blank">S8</a>
+    </div>
+  </div>
+  <div class="nav-item">5A
+    <div class="dropdown">
+      <a href="https://github.com/moh8dhia/MAM-PARTAGE/tree/main/S9" target="_blank">S9</a>
+      <a href="https://github.com/moh8dhia/MAM-PARTAGE/tree/main/S10" target="_blank">S10</a>
+    </div>
+  </div>
+</nav>
+
+<!-- COURBE NORMALE CENTRÉE RÉDUITE -->
+<div class="normal-curve">
+  <svg width="100%" height="150" viewBox="0 0 800 150">
+    <path d="
+      M0,140
+      C100,130 150,60 200,50
+      C300,30 500,30 600,50
+      C650,60 700,130 800,140
+    " fill="none" stroke="#90caf9" stroke-width="3"/>
   </svg>
 </div>
 
-<!-- MENU FLOTTANT -->
-<div class="floating-menu">
-  <h4>3A</h4>
-  <ul>
-    <li><a href="#">S5 - TP</a></li>
-    <li><a href="#">S6 - TP</a></li>
-  </ul>
-  <h4>4A</h4>
-  <ul>
-    <li><a href="#">S7 - TP</a></li>
-    <li><a href="#">S8 - TP</a></li>
-  </ul>
-  <h4>5A</h4>
-  <ul>
-    <li><a href="#">S9 - TP</a></li>
-    <li><a href="#">S10 - TP</a></li>
-  </ul>
-</div>
+<!-- CONTENU PRINCIPAL -->
+<div class="content">
+  <h1>MAM PARTAGE</h1>
 
-<h1>MAM PARTAGE</h1>
+  <h2>Naissance du Git</h2>
+  <p>Suite à l'<strong>égoïsme</strong> et l'<strong>hypocrisie</strong> de certains étudiants de notre chère filière, ce dépôt s'est imposé comme une alternative sécurisée à notre célèbre drive (<a href="https://drive.google.com/drive/folders/14sXfUbgN3qCsjIV7yLSrbB1hRzD_Pqit">MAM Partage</a>), qui avait pourtant été utile à beaucoup d'entre nous, mais dont l'existence était menacée par ceux qui se croyaient au-dessus des règles et se permettaient de supprimer les fichiers partagés.</p>
 
-<h2>Naissance du Git</h2>
-<p>Suite à l'<strong>égoïsme</strong> et l'<strong>hypocrisie</strong> de certains étudiants de notre chère filière, ce dépôt s'est imposé comme une alternative sécurisée à notre célèbre drive (<a href="https://drive.google.com/drive/folders/14sXfUbgN3qCsjIV7yLSrbB1hRzD_Pqit">MAM Partage</a>), qui avait pourtant été utile à beaucoup d'entre nous, mais dont l'existence était menacée par ceux qui se croyaient au-dessus des règles et se permettaient de supprimer les fichiers partagés.</p>
+  <h2>Un couteau à double tranchant</h2>
+  <p>Ce dépôt a donc pour but de partager les cours, TD, TP, comptes rendus et examens de chaque année. Il faut donc savoir l'utiliser à <strong>bon escient</strong>.
+  Certes, on cherche tous à avoir notre diplôme, mais copier bêtement les comptes rendus dans l'espoir d'avoir une bonne note n'aura d'effet qu'à court terme — et pourra même te desservir sur le long terme...</p>
 
-<h2>Un couteau à double tranchant</h2>
-<p>Ce dépôt a donc pour but de partager les cours, TD, TP, comptes rendus et examens de chaque année. Il faut donc savoir l'utiliser à <strong>bon escient</strong>.
-Certes, on cherche tous à avoir notre diplôme, mais copier bêtement les comptes rendus dans l'espoir d'avoir une bonne note n'aura d'effet qu'à court terme — et pourra même te desservir sur le long terme...</p>
+  <h2>Comment utiliser</h2>
 
-<h2>Comment utiliser</h2>
+  <h3>1. Consulter les fichiers via GitHub Pages</h3>
+  <p>Le site GitHub Pages permet de parcourir rapidement les ressources sans cloner le dépôt.<br>
+  Rends-toi simplement sur : <a href="https://moh8dhia.github.io/MAM-PARTAGE/">https://moh8dhia.github.io/MAM-PARTAGE/</a></p>
+  <p>Tu y trouveras l’arborescence des semestres (S5 à S10), les matières associées, et leurs sous-dossiers (<code>CM</code>, <code>TD</code>, <code>TP</code>, <code>Examens</code>).</p>
 
-<h3>1. Consulter les fichiers via GitHub Pages</h3>
-<p>Le site GitHub Pages permet de parcourir rapidement les ressources sans cloner le dépôt.<br>
-Rends-toi simplement sur : <a href="https://moh8dhia.github.io/MAM-PARTAGE/">https://moh8dhia.github.io/MAM-PARTAGE/</a></p>
-<p>Tu y trouveras l’arborescence des semestres (S5 à S10), les matières associées, et leurs sous-dossiers (<code>CM</code>, <code>TD</code>, <code>TP</code>, <code>Examens</code>).</p>
+  <h3>2. Cloner le dépôt sur ta machine</h3>
+  <pre><code>git clone https://github.com/moh8dhia/MAM-PARTAGE.git</code></pre>
 
-<h3>2. Cloner le dépôt sur ta machine</h3>
-<pre><code>git clone https://github.com/moh8dhia/MAM-PARTAGE.git</code></pre>
-<p>Cela créera un dossier <code>MAM-PARTAGE/</code> contenant tous les fichiers.</p>
-
-<h3>3. Ajouter des fichiers au dépôt (push)</h3>
-
-<h4>Étapes :</h4>
-
-<ol>
-<li><strong>Faire un fork du dépôt</strong><br>
-Rends-toi sur la page du dépôt : <a href="https://github.com/moh8dhia/MAM-PARTAGE">https://github.com/moh8dhia/MAM-PARTAGE</a><br>
-Clique sur le bouton <strong>Fork</strong> en haut à droite. GitHub créera une copie dans ton propre compte.</li>
-
-<li><strong>Cloner ton fork</strong><br>
-<pre><code>git clone https://github.com/ton-pseudo/MAM-PARTAGE.git</code></pre></li>
-
-<li><strong>Ajoute ou modifie un fichier dans le bon dossier</strong></li>
-
-<li><strong>Nomme ton fichier correctement :</strong>
-<ul>
-  <li><code>chapX_anneescolaire.extension</code> (CM)</li>
-  <li><code>tdX_anneescolaire.extension</code> (TD)</li>
-  <li><code>tpX_anneescolaire_noteobtenue.extension</code> (TP)</li>
-  <li><code>ccX_anneescolaire.extension</code> (Examens)</li>
-</ul>
-</li>
-
-<li><strong>Pousse tes modifications</strong><br>
-<pre><code>git add .
+  <h3>3. Ajouter des fichiers au dépôt (push)</h3>
+  <ol>
+    <li><strong>Faire un fork du dépôt</strong><br>
+      <a href="https://github.com/moh8dhia/MAM-PARTAGE">https://github.com/moh8dhia/MAM-PARTAGE</a></li>
+    <li><strong>Cloner ton fork</strong><br>
+      <pre><code>git clone https://github.com/ton-pseudo/MAM-PARTAGE.git</code></pre></li>
+    <li><strong>Ajoute ou modifie un fichier dans le bon dossier</strong></li>
+    <li><strong>Nomme ton fichier correctement :</strong>
+      <ul>
+        <li><code>chapX_anneescolaire.extension</code> (CM)</li>
+        <li><code>tdX_anneescolaire.extension</code> (TD)</li>
+        <li><code>tpX_anneescolaire_noteobtenue.extension</code> (TP)</li>
+        <li><code>ccX_anneescolaire.extension</code> (Examens)</li>
+      </ul>
+    </li>
+    <li><strong>Pousse tes modifications</strong><br>
+      <pre><code>git add .
 git commit -m "Ajout de td3 en probabilités - 2023-2024"
 git push</code></pre></li>
-
-<li><strong>Ouvre une pull request</strong> sur GitHub. Les modifications seront examinées avant d’être intégrées.</li>
-</ol>
+    <li><strong>Ouvre une pull request</strong> sur GitHub.</li>
+  </ol>
+</div>
 
 </body>
 </html>
