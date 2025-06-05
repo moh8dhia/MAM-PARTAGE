@@ -2,31 +2,89 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>MAM Partage</title>
+  <title>MAM PARTAGE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: sans-serif; padding: 40px; background: #f5f5f5; }
-    h1 { color: #222; }
-    ul { list-style: none; padding: 0; }
-    li { margin: 10px 0; }
-    a { text-decoration: none; color: #0077cc; font-weight: bold; }
-    a:hover { color: #005599; }
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #f8f8f8;
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #222;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    hr {
+      margin: 30px 0;
+    }
   </style>
 </head>
 <body>
-  <h1> MAM Partage — Portail des ressources</h1>
-  <p>Bienvenue sur le site de partage des cours, TD, TP et examens de la filière MAM.</p>
 
-  <h2>🔎 Semestres</h2>
-  <ul>
-    <li><a href="../S5">S5</a></li>
-    <li><a href="../S6">S6</a></li>
-    <li><a href="../S7">S7</a></li>
-    <li><a href="../S8">S8</a></li>
-    <li><a href="../S9">S9</a></li>
-    <li><a href="../S10">S10</a></li>
-  </ul>
+<h1>MAM PARTAGE</h1>
 
-  <p style="margin-top:40px;font-size:0.9em;">Dernière mise à jour : <em><span id="date"></span></em></p>
-  <script>document.getElementById("date").innerText = new Date().toLocaleDateString();</script>
+<h2>Naissance du Git</h2>
+<p>Suite à l'<strong>égoïsme</strong> et l'<strong>hypocrisie</strong> de certains étudiants de notre chère filière, ce dépôt s'est imposé comme une alternative sécurisée à notre célèbre drive (<a href="https://drive.google.com/drive/folders/14sXfUbgN3qCsjIV7yLSrbB1hRzD_Pqit">MAM Partage</a>), qui avait pourtant été utile à beaucoup d'entre nous, mais dont l'existence était menacée par ceux qui se croyaient au-dessus des règles et se permettaient de supprimer les fichiers partagés.</p>
+
+<h2>Un couteau à double tranchant</h2>
+<p>Ce dépôt a donc pour but de partager les cours, TD, TP, comptes rendus et examens de chaque année. Il faut donc savoir l'utiliser à <strong>bon escient</strong>.
+Certes, on cherche tous à avoir notre diplôme, mais copier bêtement les comptes rendus dans l'espoir d'avoir une bonne note n'aura d'effet qu'à court terme — et pourra même te desservir sur le long terme...</p>
+
+<h2>Comment utiliser</h2>
+
+<h3>1. Consulter les fichiers via GitHub Pages</h3>
+<p>Le site GitHub Pages permet de parcourir rapidement les ressources sans cloner le dépôt.<br>
+Rends-toi simplement sur : <a href="https://moh8dhia.github.io/MAM-PARTAGE/">https://moh8dhia.github.io/MAM-PARTAGE/</a></p>
+<p>Tu y trouveras l’arborescence des semestres (S5 à S10), les matières associées, et leurs sous-dossiers (<code>CM</code>, <code>TD</code>, <code>TP</code>, <code>Examens</code>).</p>
+
+<h3>2. Cloner le dépôt sur ta machine</h3>
+<pre><code>git clone https://github.com/moh8dhia/MAM-PARTAGE.git</code></pre>
+<p>Cela créera un dossier <code>MAM-PARTAGE/</code> contenant tous les fichiers.</p>
+
+<h3>3. Ajouter des fichiers au dépôt (push)</h3>
+
+<h4>Étapes :</h4>
+
+<ol>
+<li><strong>Faire un fork du dépôt</strong><br>
+Rends-toi sur la page du dépôt : <a href="https://github.com/moh8dhia/MAM-PARTAGE">https://github.com/moh8dhia/MAM-PARTAGE</a><br>
+Clique sur le bouton <strong>Fork</strong> en haut à droite. GitHub créera une copie dans ton propre compte.</li>
+
+<li><strong>Cloner ton fork</strong><br>
+<pre><code>git clone https://github.com/ton-pseudo/MAM-PARTAGE.git</code></pre></li>
+
+<li><strong>Ajoute ou modifie un fichier dans le bon dossier</strong></li>
+
+<li><strong>Nomme ton fichier correctement :</strong>
+<ul>
+  <li><code>chapX_anneescolaire.extension</code> (CM)</li>
+  <li><code>tdX_anneescolaire.extension</code> (TD)</li>
+  <li><code>tpX_anneescolaire_noteobtenue.extension</code> (TP)</li>
+  <li><code>ccX_anneescolaire.extension</code> (Examens)</li>
+</ul>
+</li>
+
+<li><strong>Pousse tes modifications</strong><br>
+<pre><code>git add .
+git commit -m "Ajout de td3 en probabilités - 2023-2024"
+git push</code></pre></li>
+
+<li><strong>Ouvre une pull request</strong> sur GitHub. Les modifications seront examinées avant d’être intégrées.</li>
+</ol>
+
 </body>
 </html>
