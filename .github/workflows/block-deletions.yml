@@ -1,0 +1,27 @@
+name: Bloquer les suppressions de fichiers
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  block-deletions:
+    name: Refuse les suppressions
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupération du code
+        uses: actions/checkout@v3
+
+      - name: Détecter les fichiers supprimés
+        run: |
+          deleted_files=$(git diff --name-only --diff-filter=D origin/main...HEAD)
+
+          if [[ -n "$deleted_files" ]]; then
+            echo "❌ Fichiers supprimés détectés :"
+            echo "$deleted_files"
+            echo "⛔️ Les suppressions de fichiers ne sont pas autorisées."
+            exit 1
+          else
+            echo "✅ Aucun fichier supprimé, PR autorisée."
+          fi
