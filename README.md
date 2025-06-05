@@ -11,16 +11,8 @@ Certes, on cherche tous à avoir notre diplôme, mais copier bêtement les compt
 
 ## Comment utiliser
 
-### 1. Consulter les fichiers via GitHub Pages
 
-Le site GitHub Pages permet de parcourir rapidement les ressources sans cloner le dépôt.  
-Rends-toi simplement sur : [https://moh8dhia.github.io/MAM-PARTAGE/](https://moh8dhia.github.io/MAM-PARTAGE/)
-
-Tu y trouveras l’arborescence des semestres (S5 à S10), les matières associées, et leurs sous-dossiers (`CM`, `TD`, `TP`, `Examens`).
-
----
-
-### 2. Cloner le dépôt sur ta machine
+### 1. Cloner le dépôt sur ta machine
 
 Tu peux aussi récupérer tout le contenu en local pour travailler hors ligne ou contribuer plus facilement :
 
@@ -30,7 +22,7 @@ git clone https://github.com/moh8dhia/MAM-PARTAGE.git
 
 Cela créera un dossier `MAM-PARTAGE/` contenant tous les fichiers.
 
-### 3. Ajouter des fichiers au dépôt (push)
+### 2. Ajouter des fichiers au dépôt (push)
 
 **Étapes :**
 
@@ -79,3 +71,5 @@ git push
 6. Ouvre une pull request depuis GitHub pour proposer l’ajout au dépôt principal.  
 Les modifications seront examinées avant d’être intégrées.
 
+
+**Bonne utilisation ;)**
