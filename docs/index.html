@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>MAM Partage</title>
+  <style>
+    body { font-family: sans-serif; padding: 40px; background: #f5f5f5; }
+    h1 { color: #222; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 10px 0; }
+    a { text-decoration: none; color: #0077cc; font-weight: bold; }
+    a:hover { color: #005599; }
+  </style>
+</head>
+<body>
+  <h1> MAM Partage — Portail des ressources</h1>
+  <p>Bienvenue sur le site de partage des cours, TD, TP et examens de la filière MAM.</p>
+
+  <h2>🔎 Semestres</h2>
+  <ul>
+    <li><a href="../S5">S5</a></li>
+    <li><a href="../S6">S6</a></li>
+    <li><a href="../S7">S7</a></li>
+    <li><a href="../S8">S8</a></li>
+    <li><a href="../S9">S9</a></li>
+    <li><a href="../S10">S10</a></li>
+  </ul>
+
+  <p style="margin-top:40px;font-size:0.9em;">Dernière mise à jour : <em><span id="date"></span></em></p>
+  <script>document.getElementById("date").innerText = new Date().toLocaleDateString();</script>
+</body>
+</html>
