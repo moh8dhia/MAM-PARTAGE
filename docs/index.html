@@ -5,31 +5,114 @@
   <title>MAM PARTAGE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-  body {
-    background-color: #121212;
-    color: #e0e0e0;
-    font-family: sans-serif;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: auto;
-    padding: 40px;
-  }
-  h1, h2, h3 {
-    color: #ffffff;
-  }
-  a {
-    color: #90caf9;
-  }
-  code, pre {
-    background-color: #1e1e1e;
-    color: #dcdcdc;
-    padding: 5px 8px;
-    border-radius: 5px;
-  }
-</style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+      padding: 40px;
+    }
 
+    h1, h2, h3 {
+      color: #ffffff;
+    }
+
+    a {
+      color: #90caf9;
+      text-decoration: none;
+    }
+
+    code, pre {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      padding: 5px 8px;
+      border-radius: 5px;
+    }
+
+    .animation-container {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    svg path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw 3s ease-out forwards;
+    }
+
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    /* MENU FLOTTANT */
+    .floating-menu {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      background-color: #1e1e1e;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 10px 15px;
+      z-index: 999;
+      font-size: 14px;
+      max-width: 180px;
+    }
+
+    .floating-menu h4 {
+      color: #90caf9;
+      margin: 10px 0 5px;
+    }
+
+    .floating-menu ul {
+      list-style: none;
+      padding-left: 10px;
+      margin: 0;
+    }
+
+    .floating-menu li {
+      margin: 5px 0;
+    }
+
+    .floating-menu a {
+      color: #e0e0e0;
+      font-weight: normal;
+    }
+
+    .floating-menu a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+
+<div class="animation-container">
+  <svg width="100%" height="120" viewBox="0 0 800 120">
+    <path d="M0,110 C100,20 300,20 400,110 C500,200 700,200 800,110" fill="none" stroke="#90caf9" stroke-width="3"/>
+  </svg>
+</div>
+
+<!-- MENU FLOTTANT -->
+<div class="floating-menu">
+  <h4>3A</h4>
+  <ul>
+    <li><a href="#">S5 - TP</a></li>
+    <li><a href="#">S6 - TP</a></li>
+  </ul>
+  <h4>4A</h4>
+  <ul>
+    <li><a href="#">S7 - TP</a></li>
+    <li><a href="#">S8 - TP</a></li>
+  </ul>
+  <h4>5A</h4>
+  <ul>
+    <li><a href="#">S9 - TP</a></li>
+    <li><a href="#">S10 - TP</a></li>
+  </ul>
+</div>
 
 <h1>MAM PARTAGE</h1>
 
