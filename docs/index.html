@@ -13,10 +13,9 @@
       padding: 0;
     }
 
-    /* MENU NAVIGATION */
     nav {
       background-color: #1e1e1e;
-      padding: 10px 40px;
+      padding: 12px 40px;
       display: flex;
       justify-content: flex-end;
       gap: 30px;
@@ -61,52 +60,69 @@
       background-color: #3a3a3a;
     }
 
-    /* COURBE NORMALE */
     .normal-curve {
       display: flex;
       justify-content: center;
-      padding-top: 10px;
+      margin: 20px 0 40px 0;
     }
 
-    .normal-curve svg path {
-      stroke-dasharray: 1200;
-      stroke-dashoffset: 1200;
-      animation: draw 2s ease-out forwards;
-    }
-
-    @keyframes draw {
-      to {
-        stroke-dashoffset: 0;
-      }
-    }
-
-    /* PAGE */
     .content {
       max-width: 800px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 0 20px 40px 20px;
     }
 
-    h1, h2, h3 {
-      color: #ffffff;
+    h1 {
+      font-size: 2.4em;
+      margin-bottom: 0.5em;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
+    }
+
+    h3 {
+      font-size: 1.3em;
+      margin-top: 1.5em;
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      margin: 1em 0;
+      text-align: justify;
+    }
+
+    ol {
+      margin-left: 1.2em;
+    }
+
+    ul {
+      margin-left: 1.5em;
+    }
+
+    pre, code {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      padding: 5px 8px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    pre {
+      margin: 12px 0;
     }
 
     a {
       color: #90caf9;
       text-decoration: none;
     }
-
-    code, pre {
-      background-color: #1e1e1e;
-      color: #dcdcdc;
-      padding: 5px 8px;
-      border-radius: 5px;
-    }
   </style>
 </head>
 <body>
 
-<!-- MENU NAVIGATION EN HAUT À DROITE -->
+<!-- NAVIGATION -->
 <nav>
   <div class="nav-item">3A
     <div class="dropdown">
@@ -128,7 +144,7 @@
   </div>
 </nav>
 
-<!-- COURBE NORMALE CENTRÉE RÉDUITE -->
+<!-- COURBE NORMALE FIXE -->
 <div class="normal-curve">
   <svg width="80%" height="100" viewBox="0 0 1000 100">
     <path d="M0,100 
@@ -165,9 +181,12 @@
   <ol>
     <li><strong>Faire un fork du dépôt</strong><br>
       <a href="https://github.com/moh8dhia/MAM-PARTAGE">https://github.com/moh8dhia/MAM-PARTAGE</a></li>
+
     <li><strong>Cloner ton fork</strong><br>
       <pre><code>git clone https://github.com/ton-pseudo/MAM-PARTAGE.git</code></pre></li>
+
     <li><strong>Ajoute ou modifie un fichier dans le bon dossier</strong></li>
+
     <li><strong>Nomme ton fichier correctement :</strong>
       <ul>
         <li><code>chapX_anneescolaire.extension</code> (CM)</li>
@@ -176,10 +195,12 @@
         <li><code>ccX_anneescolaire.extension</code> (Examens)</li>
       </ul>
     </li>
+
     <li><strong>Pousse tes modifications</strong><br>
       <pre><code>git add .
 git commit -m "Ajout de td3 en probabilités - 2023-2024"
 git push</code></pre></li>
+
     <li><strong>Ouvre une pull request</strong> sur GitHub.</li>
   </ol>
 </div>
