@@ -1,0 +1,45 @@
+name: Vérification des noms de fichiers
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  filename-check:
+    name: Vérifie le format des fichiers ajoutés
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupération du code
+        uses: actions/checkout@v3
+
+      - name: Analyse des fichiers modifiés
+        uses: tj-actions/changed-files@v41
+        id: fichiers
+
+      - name: Vérification du nom des fichiers
+        run: |
+          echo "🧪 Fichiers ajoutés/modifiés :"
+          echo "${{ steps.fichiers.outputs.all_changed_files }}"
+
+          erreur=0
+
+          for fichier in ${{ steps.fichiers.outputs.all_changed_files }}; do
+            # On ignore les fichiers README.md ou index.html
+            if [[ "$fichier" == *README.md || "$fichier" == *index.html ]]; then
+              continue
+            fi
+
+            # Vérifie les noms autorisés : chapX_, tdX_, tpX_, ccX_
+            if [[ ! "$fichier" =~ (chap[0-9]+_|td[0-9]+_|tp[0-9]+_[0-9]{4}-[0-9]{4}_[0-9]+-[0-9]+|cc[0-9]+_) ]]; then
+              echo "❌ Mauvais nom de fichier ou format invalide : $fichier"
+              erreur=1
+            fi
+          done
+
+          if [[ "$erreur" == "1" ]]; then
+            echo "⛔️ Échec de la vérification : certains fichiers ne respectent pas les conventions."
+            exit 1
+          else
+            echo "✅ Tous les fichiers sont correctement nommés."
+          fi
